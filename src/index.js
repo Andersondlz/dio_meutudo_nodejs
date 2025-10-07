@@ -6,10 +6,11 @@ import { connectToDatabase, desconnectFromDatabase, dataBaseType} from './utils/
 import { key, getDataFromAPI } from './utils/api.js';
 import { products, getProductById } from './data/produtcs.js';
 import readline from 'readline';
+import logSymbols from 'log-symbols';
 
 console.log(key.value);
 console.log(key.permission);
-console.log(key.type);
+console.log(logSymbols.success + ' ' + key.type);
 
 await getDataFromAPI('/users');
 

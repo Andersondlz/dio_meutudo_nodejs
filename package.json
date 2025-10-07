@@ -12,5 +12,8 @@
   "description": "",
   "dependencies": {
     "chalk": "^5.6.2"
+  },
+  "devDependencies": {
+    "log-symbols": "^7.0.1"
   }
 }
