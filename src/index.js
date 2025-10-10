@@ -7,6 +7,7 @@ import { key, getDataFromAPI } from './utils/api.js';
 import { products, getProductById } from './data/produtcs.js';
 import readline from 'readline';
 import logSymbols from 'log-symbols';
+import connectToDatabase1 from './database/data.js';
 
 console.log(key.value);
 console.log(key.permission);
@@ -66,3 +67,12 @@ products.forEach(product => {
 const total = products.reduce((sum, product) => sum + product.price, 0);
 console.log(`Soma total dos preços dos produtos: $${total}`);
 
+
+
+async function main() {
+
+    await connectToDatabase1(process.env.USERDATABASE, process.env.PASSWORDDATABASE);   
+
+}
+
+main();
